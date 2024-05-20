@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project 5/19/24</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poetsen+One&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+      <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <p id="toggleGroupOne">Past Wordle Words</p>
+        <button id="resetButton1" class="permanent-marker-regular">WP</button>
+        <h2>The Wordle Partner</h2>
+        <button id="resetButton2" class="permanent-marker-regular">WP</button>
+        <p id="toggleGroupTwo">Available Words</p>
+    </header>
+    <hr>
+    <main class="main-container">
+        <section class="group-one hidden">
+            <h4>Is your Wordle guess a past Wordle word? The answer lies here!</h4>
+            <div class="past-input">
+                <input type="text" id="wordInput" placeholder="Type a 5 Letter Word">
+                <button id="submitButton">Submit Word</button>
+            </div>
+            <div class="field-one"></div>
+        </section>      
+        <section class="group-two hidden">
+            <h4>Filter Available Words here!</h4>
+            <div class="filter-input">
+                <input type="text" id="letterInput" placeholder="Enter Letter">
+                <input type="number" id="positionInput" placeholder="Enter Position (1-5)">
+                <select id="functionSelect">
+                    <option value="containsLetter">Contains Letter</option>
+                    <option value="doesNotContainLetter">Does Not Contain Letter</option>
+                    <option value="containsLetterAtPosition">Contains Letter at Position</option>
+                    <option value="containsLetterNotAtPosition">Contains Letter Not at Position</option>
+                    <option value="containsRepeatingConsecutiveLetters">Contains Repeating Consecutive Letters</option>
+                    <option value="containsDuplicateLetters">Contains Duplicate Letters</option>
+                </select>
+                <button id="applyFilterButton">Click To Filter Letters</button>
+            </div>
+            <div id="filteredWords"></div>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <a href="https://wordfinder.yourdictionary.com/wordle/answers/" target="_blank" id="wordle-link">Verify Answers</a>
+        <a href="https://www.nytimes.com/games/wordle/index.html" target="_blank" id="nyt-link">Play Wordle</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
